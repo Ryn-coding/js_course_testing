@@ -29,4 +29,20 @@ show();
 
 // console.log(functionVar); // Throws ReferenceError
 // console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+/* Practice Task */
+{
+    var a = 'test A';
+    let b = 'test B';
+    const c = 'test C';
+
+    // Reassign
+    var a = 'test A2'; // works
+    let b = 'test B2'; // can't redeclare
+    const c = 'test C2'; // can't redeclare
+}
+
+var a = 'Test A_'; // works
+let b = 'Test B_'; // works
+const c = 'Test C_'; // works
