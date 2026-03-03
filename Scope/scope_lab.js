@@ -39,8 +39,8 @@ show();
 
     // Reassign
     var a = 'test A2'; // works
-    let b = 'test B2'; // can't redeclare
-    const c = 'test C2'; // can't redeclare
+    // let b = 'test B2'; // can't redeclare
+    // const c = 'test C2'; // can't redeclare
 }
 
 var a = 'Test A_'; // works
