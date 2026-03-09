@@ -1,3 +1,9 @@
+/**
+ * Control Flow Examples
+ * Demonstrates if-else statements, nested conditionals, switch statements, and ternary operators
+ */
+
+// Example 1: Simple if-else statement for access level based on user role
 let userRole = "admin";
 let accessLevel;
 
@@ -11,6 +17,8 @@ if (userRole === "admin") {
 
 console.log("Access Level:", accessLevel);
 
+
+// Example 2: Nested if-else statement for custom greeting
 let isLoggedIn = true;
 let userMessage;
 
@@ -26,6 +34,8 @@ if (isLoggedIn) {
 
 console.log("User Message:", userMessage);
 
+
+// Example 3: Switch statement for user category classification
 let userType = "subscriber";
 let userCategory;
 
@@ -45,6 +55,8 @@ switch (userType) {
 
 console.log("User Category:", userCategory);
 
+
+// Example 4: Ternary operator for authentication status
 let isAuthenticated = true;
 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";

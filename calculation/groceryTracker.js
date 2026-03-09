@@ -1,3 +1,12 @@
+/**
+ * Grocery Tracker Application
+ * This application tracks grocery items and calculates the total amount spent
+ */
+
+/**
+ * Calculates the total amount from all grocery items
+ * Sums up all values in grocery item input fields and displays the total
+ */
 function totalGroceryAmount() {
     let totalAmount = 0;
     let groceryItems = document.querySelectorAll('.grocery-item');
@@ -9,7 +18,11 @@ function totalGroceryAmount() {
     document.getElementById('result').innerText = `The total amount is: ${totalAmount}`;
 }
 
-// Function to add new grocery input field
+
+/**
+ * Adds a new grocery item input field to the container
+ * Creates new label, input, and line break elements dynamically
+ */
 function addItem() {
     let container = document.getElementById("groceryContainer");
 
@@ -26,7 +39,12 @@ function addItem() {
     container.appendChild(document.createElement("br"));
 }
 
-// Function to calculate total
+
+/**
+ * Calculates the total from an array of amounts
+ * @param {number[]} amounts - Array of grocery amounts
+ * @return {number} The sum total of all amounts
+ */
 function groceryTracker(amounts) {
     let total = 0;
 
@@ -37,6 +55,11 @@ function groceryTracker(amounts) {
     return total;
 }
 
+
+/**
+ * Collects grocery amounts from input fields and calculates total
+ * Retrieves values from grocery input fields and uses the groceryTracker function to calculate sum
+ */
 function calculateTotal() {
     let groceryInputs = document.getElementsByClassName("grocery");
     let amounts = [];

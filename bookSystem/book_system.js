@@ -1,5 +1,15 @@
+/**
+ * Book Management System
+ * This application manages a collection of books with functionality to add, edit, and delete book entries.
+ */
+
+// Array to store all book objects
 let books = [];
 
+/**
+ * Adds a new book to the books array
+ * Retrieves book details from input fields, validates them, and creates a book object
+ */
 function addBook() {
     const bookName = document.getElementById('bookName').value;
     const authorName = document.getElementById('authorName').value;
@@ -20,6 +30,11 @@ function addBook() {
     }
 }
 
+
+/**
+ * Displays all books in the DOM
+ * Maps through the books array and creates HTML elements for each book with Edit and Delete buttons
+ */
 function showbooks() {
     const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1>
         <p><strong>Book Name: </strong>${book.name}</p>
@@ -32,6 +47,11 @@ function showbooks() {
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
 
+
+/**
+ * Loads a book's details into the input fields for editing
+ * @param {number} index - The index of the book to edit in the books array
+ */
 function editbook(index) {
     const book = books[index];
     document.getElementById('bookName').value = book.name;
@@ -42,11 +62,20 @@ function editbook(index) {
     showbooks(); // Refresh list
 }
 
+
+/**
+ * Deletes a book from the books array
+ * @param {number} index - The index of the book to delete from the books array
+ */
 function deleteBook(index) {
     books.splice(index, 1);
     showbooks();
 }
 
+
+/**
+ * Clears all input fields to reset the form
+ */
 function clearInputs() {
     document.getElementById('bookName').value = '';
     document.getElementById('authorName').value = '';

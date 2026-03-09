@@ -1,31 +1,40 @@
 
+/**
+ * Main operation function
+ * Demonstrates arithmetic operations (addition, multiplication, division) with debugging
+ * Includes debugger statements to aid code debugging and flow visualization
+ */
 function performOperation() {
     console.log("performOperation() started");
     
-    // Get user input from input fields
+    // Retrieve user input from HTML input elements
     let num1 = document.getElementById('input1').value;
     let num2 = document.getElementById('input2').value;
     
     console.log("Raw Input - num1:", num1, "Type:", typeof num1);
     console.log("Raw Input - num2:", num2, "Type:", typeof num2);
     
-    // Assign one value as a character and observe in debugger
+
+    // Assign a character value to demonstrate type differences in the debugger
     let characterValue = "X";
     debugger; // Pause here to observe the character value
     console.log("Character Value assigned:", characterValue, "Type:", typeof characterValue);
     
-    // Convert to numbers
+
+    // Convert string inputs to numbers for arithmetic operations
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
     
     console.log("Converted - num1:", num1, "Type:", typeof num1);
     console.log("Converted - num2:", num2, "Type:", typeof num2);
     
-    // Check if inputs are valid numbers
+
+    // Validate that both inputs are valid numbers after conversion
     if (!isNaN(num1) && !isNaN(num2)) {
         console.log("Valid inputs received. Processing operations...");
         
-        // Perform multiple operations simultaneously
+
+        // Execute all arithmetic operations
         let additionResult = addition(num1, num2);
         let multiplicationResult = multiply(num1, num2);
         let divisionResult = divide(num1, num2);
@@ -38,6 +47,13 @@ function performOperation() {
     }
 }
 
+
+/**
+ * Performs addition operation
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @return {number} Sum of a and b
+ */
 function addition(a, b) {
     console.log("Addition function called with:", a, "+", b);
     debugger; // Pause to inspect addition operation
@@ -46,6 +62,13 @@ function addition(a, b) {
     return result;
 }
 
+
+/**
+ * Performs multiplication operation
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @return {number} Product of a and b
+ */
 function multiply(a, b) {
     console.log("Multiply function called with:", a, "*", b);
     debugger; // Pause to inspect multiplication operation
@@ -54,6 +77,13 @@ function multiply(a, b) {
     return result;
 }
 
+
+/**
+ * Performs division operation with zero-check
+ * @param {number} a - Dividend
+ * @param {number} b - Divisor
+ * @return {number|string} Division result or error message if dividing by zero
+ */
 function divide(a, b) {
     console.log("Divide function called with:", a, "/", b);
     debugger; // Pause to inspect division operation
@@ -68,6 +98,16 @@ function divide(a, b) {
     return result;
 }
 
+
+/**
+ * Displays all arithmetic operation results in the DOM
+ * @param {number} num1 - First input number
+ * @param {number} num2 - Second input number
+ * @param {number} additionResult - Result of addition
+ * @param {number} multiplicationResult - Result of multiplication
+ * @param {number|string} divisionResult - Result of division
+ * @param {string} charValue - Character value used for demonstration
+ */
 function displayResult(num1, num2, additionResult, multiplicationResult, divisionResult, charValue) {
     console.log("displayResult() called");
     

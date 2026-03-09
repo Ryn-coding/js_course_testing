@@ -1,8 +1,19 @@
+/**
+ * Typing Speed Test Application
+ * This application measures typing speed in Words Per Minute (WPM) and character count
+ */
+
+// Test sentence and timer variables
 let testText = "The quick brown fox jumps over the lazy dog.";
 let startTime, endTime;
 
+
+/**
+ * Initializes the typing test
+ * Sets up the test text, clears previous results, and starts the timer
+ */
 function startTest() {
-    // Set the test text
+    // Display the target text that user needs to type
     document.getElementById("inputText").value = testText;
 
     // Reset user input and output
@@ -17,13 +28,19 @@ function startTest() {
     startTime = new Date().getTime();
 }
 
+
+/**
+ * Ends the typing test and calculates results
+ * Calculates WPM, character count, and displays comprehensive test results
+ */
 function endTest() {
     endTime = new Date().getTime();
 
-    // Disable user input
+    // Disable the input field to prevent further typing
     document.getElementById("userInput").readOnly = true;
 
-    // Calculate time elapsed and words per minute (WPM)
+
+    // Calculate elapsed time and words per minute (WPM)
     var timeElapsed = (endTime - startTime) / 1000; // in seconds
     var userTypedText = document.getElementById("userInput").value;
 
@@ -41,7 +58,8 @@ function endTest() {
     // Calculate total text length
     var textLength = userTypedText.length;
 
-    // Display the results
+
+    // Display all test results including WPM, character count, and time elapsed
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
         "<p>Words Typed: " + typedWords + "</p>" +

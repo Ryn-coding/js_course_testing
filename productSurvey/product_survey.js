@@ -1,9 +1,19 @@
-const submitButton = document.getElementById('submitBtn');
+/**
+ * Product Survey Form
+ * This application captures user feedback on products through a survey form
+ */
 
+// Get submit button element and attach event listener
+const submitButton = document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
 
+
+/**
+ * Handles form submission and displays captured feedback
+ * Collects all form values and displays them in the results section
+ */
 function submitFeedback() {
-    // Capture values when form is submitted
+    // Capture feedback form values from input fields
     const username = document.getElementById('name').value;
     const age = document.getElementById('age').value;
     const email = document.getElementById('email').value;
@@ -13,10 +23,10 @@ function submitFeedback() {
     const feedback = document.getElementById('feedbackText').value;
     const experience = document.getElementById('userExperince').value;
     
-    // alert('Thank you for your valuable feedback')
+    // Log username for debugging purposes
     console.log(username);
     
-    // Display the captured values
+    // Display all captured feedback values in the results section
     document.getElementById('userName').innerHTML = username;
     document.getElementById('userAge').innerHTML = age;
     document.getElementById('userEmail').innerHTML = email;
@@ -29,6 +39,11 @@ function submitFeedback() {
     document.getElementById('userInfo').style.display = 'block';
 }
 
+
+/**
+ * Event listener for Enter key to submit form
+ * Allows users to submit the form by pressing the Enter key
+ */
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         submitFeedback();
