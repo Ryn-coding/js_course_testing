@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "title": "Global Markets Rally After Central Bank Announcement",
+      "description": "Stocks surged worldwide after the central bank signaled it would keep interest rates steady for the next quarter.",
+      "date": "2026-03-12",
+      "source": "Financial Daily",
+      "highlights": [
+        "Major indices rose between 1% and 2% on optimism about economic growth.",
+        "Energy and tech sectors led the gains.",
+        "Analysts say investors are looking for clearer signs of inflation cooling."
+      ]
+    },
+    {
+      "title": "New Renewable Energy Plant Begins Operations",
+      "description": "A new solar farm has started producing clean energy, aiming to power 200,000 homes by the end of the year.",
+      "date": "2026-03-11",
+      "source": "Green News Network",
+      "highlights": [
+        "The facility spans over 500 acres and uses the latest photovoltaic panels.",
+        "It will reduce annual carbon emissions by an estimated 150,000 metric tons.",
+        "Local governments anticipate job growth from ongoing maintenance contracts."
+      ]
+    },
+    {
+      "title": "Tech Company Announces Cutting-Edge AI Tool",
+      "description": "A leading software firm unveiled a new AI assistant designed to help small businesses automate customer support.",
+      "date": "2026-03-10",
+      "source": "Tech Today",
+      "highlights": [
+        "The tool integrates with common messaging platforms and uses natural language understanding.",
+        "Early testers report a 40% reduction in response time to customer inquiries.",
+        "The company plans a phased rollout starting next month."
+      ]
+    }
+  ]
+}
